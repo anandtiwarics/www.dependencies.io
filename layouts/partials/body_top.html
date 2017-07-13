@@ -1,5 +1,5 @@
 {{ $deploy_env := getenv "DEPLOY_ENV" }}
-{{ if eq $deploy_env "production" }}
+{{ if not eq $deploy_env "" }}
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3P8XBL"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
