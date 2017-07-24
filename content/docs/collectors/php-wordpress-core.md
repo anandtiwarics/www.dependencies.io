@@ -1,5 +1,5 @@
 ---
-date: 2017-07-10T14:31:02.949606
+date: 2017-07-24T14:49:58.517120
 draft: false
 title: "Collector: php-wordpress-core"
 ---
@@ -20,7 +20,7 @@ that detects what version of WordPress is installed in a directory.
 This assumes you have all of the WordPress installation files in a directory
 in your repo. The `path` should point to that directory.
 
-### .dependencies.yml
+### dependencies.yml
 
 ```yaml
 collectors:

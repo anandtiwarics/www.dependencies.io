@@ -1,5 +1,5 @@
 ---
-date: 2017-06-29T15:47:28.434841
+date: 2017-07-24T14:49:58.517120
 draft: false
 title: "Collector: git-repo"
 ---
@@ -26,7 +26,7 @@ repos:
   installed: v0.19.0
 ```
 
-### .dependencies.yml
+### dependencies.yml
 
 ```yaml
 collectors:

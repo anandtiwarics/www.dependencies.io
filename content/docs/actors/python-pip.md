@@ -1,5 +1,5 @@
 ---
-date: 2017-06-16T14:50:23.362599
+date: 2017-07-24T14:49:58.517120
 draft: false
 title: "Actor: python-pip"
 ---
@@ -25,7 +25,7 @@ For each dependency, it will get the **highest** version and create a single
 branch/PR that updates all the way to that version (skipping/including any
 versions in between).
 
-### .dependencies.yml
+### dependencies.yml
 
 ```yaml
 collectors:
@@ -35,11 +35,22 @@ collectors:
     versions: "L.Y.Y"
     settings:  # all settings are optional
       pip_freeze_target: path/to/frozen/requirements.txt  # path to `pip freeze > path`
-      pr_labels:  # list of label names
+
+      # github options
+      github_labels:  # list of label names
       - bug
-      pr_assignees:  # list of usernames
+      github_assignees:  # list of usernames
       - davegaeddert
-      pr_milestone: 3  # milestone number
+      github_milestone: 3  # milestone number
+
+      # gitlab options
+      gitlab_assignee_id: 1  # assignee user ID
+      gitlab_labels:  # labels for MR as a list of strings
+      - dependencies
+      - update
+      gitlab_milestone_id: 1  # the ID of a milestone
+      gitlab_target_project_id: 1  # The target project (numeric id)
+      gitlab_remove_source_branch: true  # flag indicating if a merge request should remove the source branch when merging
 ```
 
 ### Works well with
@@ -51,6 +62,7 @@ collectors:
 
 - https://www.kennethreitz.org/essays/a-better-pip-workflow
 - https://devcenter.heroku.com/articles/python-pip
+- https://docs.gitlab.com/ce/api/merge_requests.html#create-mr
 
 ## Support
 

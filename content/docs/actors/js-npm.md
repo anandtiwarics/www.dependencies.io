@@ -1,5 +1,5 @@
 ---
-date: 2017-06-16T14:50:23.362599
+date: 2017-07-24T14:49:58.517120
 draft: false
 title: "Actor: js-npm"
 ---
@@ -15,7 +15,7 @@ updates `package-lock.json` and `yarn.lock` files if present.
 
 ## Usage
 
-### .dependencies.yml
+### dependencies.yml
 
 ```yaml
 collectors:

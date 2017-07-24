@@ -1,5 +1,5 @@
 ---
-date: 2017-06-29T15:47:28.434841
+date: 2017-07-24T14:49:58.517120
 draft: false
 title: "Actor: php-composer"
 ---
@@ -17,7 +17,7 @@ A [dependencies.io](https://www.dependencies.io)
 
 ## Usage
 
-### .dependencies.yml
+### dependencies.yml
 
 ```yaml
 collectors:

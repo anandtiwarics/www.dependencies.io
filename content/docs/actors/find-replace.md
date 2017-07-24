@@ -1,5 +1,5 @@
 ---
-date: 2017-06-29T15:47:28.434841
+date: 2017-07-24T14:49:58.517120
 draft: false
 title: "Actor: find-replace"
 ---
@@ -23,7 +23,7 @@ Additionally, if you're worried about replacing the wrong strings then you can
 use `pattern` to further define the string that is found and replaced using
 variables from the dependency.
 
-### .dependencies.yml
+### dependencies.yml
 
 ```yaml
 collectors:
@@ -38,6 +38,22 @@ collectors:
       # defaults to {version} to only replace based on the version numbers
       patterns:
       - '{name}: {version}'
+
+      # github options
+      github_labels:  # list of label names
+      - bug
+      github_assignees:  # list of usernames
+      - davegaeddert
+      github_milestone: 3  # milestone number
+
+      # gitlab options
+      gitlab_assignee_id: 1  # assignee user ID
+      gitlab_labels:  # labels for MR as a list of strings
+      - dependencies
+      - update
+      gitlab_milestone_id: 1  # the ID of a milestone
+      gitlab_target_project_id: 1  # The target project (numeric id)
+      gitlab_remove_source_branch: true  # flag indicating if a merge request should remove the source branch when merging
 ```
 
 #### Pattern args

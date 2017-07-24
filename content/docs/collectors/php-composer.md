@@ -1,5 +1,5 @@
 ---
-date: 2017-06-29T15:47:28.434841
+date: 2017-07-24T14:49:58.517120
 draft: false
 title: "Collector: php-composer"
 ---
@@ -17,7 +17,7 @@ that uses `composer install` to collect php dependencies.
 
 ## Usage
 
-### .dependencies.yml
+### dependencies.yml
 
 ```yaml
 collectors:

@@ -1,5 +1,5 @@
 ---
-date: 2017-07-10T14:31:02.949606
+date: 2017-07-24T14:49:58.517120
 draft: false
 title: "Collector: dockerfile"
 ---
@@ -17,7 +17,7 @@ finds base images of a Dockerfile. The images must be public on Docker Hub.
 
 ## Usage
 
-### .dependencies.yml
+### dependencies.yml
 
 ```yaml
 collectors:

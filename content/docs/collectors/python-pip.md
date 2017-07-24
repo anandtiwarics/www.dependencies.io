@@ -1,5 +1,5 @@
 ---
-date: 2017-06-16T14:50:23.362599
+date: 2017-07-24T14:50:32.371681
 draft: false
 title: "Collector: python-pip"
 ---
@@ -20,7 +20,7 @@ versions of each dependency got installed. It **does not** report back
 all of the dependencies that your dependencies required, only the ones that
 you specified in your requirements file.
 
-### .dependencies.yml
+### dependencies.yml
 
 ```yaml
 collectors:

@@ -1,5 +1,5 @@
 ---
-date: 2017-06-16T14:50:23.362599
+date: 2017-07-24T14:49:58.517120
 draft: false
 title: "Actor: repo-issue"
 ---
@@ -19,7 +19,7 @@ you of new versions.
 For each dependency, it will create 1 issue and list out all of the new versions
 that are available for it and any additional information about them.
 
-### .dependencies.yml
+### dependencies.yml
 
 ```yaml
 collectors:
@@ -28,11 +28,34 @@ collectors:
   - type: repo-issue
     versions: "L.Y.Y"
     settings:  # all settings are optional
-      issue_labels:  # list of label names
+      # github options
+      github_labels:  # list of label names
       - bug
-      issue_assignees:  # list of usernames
+      github_assignees:  # list of usernames
       - davegaeddert
-      issue_milestone: 3  # milestone number
+      github_milestone: 3  # milestone number
+
+      # gitlab options
+      # Set an issue to be confidential. Default is false.
+      gitlab_confidential: true  
+      # The ID of a user to assign issue
+      gitlab_assignee_ids:
+      - 1
+      # The ID of a milestone to assign issue
+      gitlab_milestone_id: 0
+      # Label names for an issue
+      gitlab_labels:
+      - discussion
+      # Date time string, ISO 8601 formatted, e.g. 2016-03-11T03:45:40Z (requires admin or project owner rights)
+      gitlab_created_at: '2016-03-11T03:45:40Z'
+      # Date time string in the format YEAR-MONTH-DAY, e.g. 2016-03-11
+      gitlab_due_date: '2016-03-11'
+      # The IID of a merge request in which to resolve all issues. This will fill the issue with a default description and mark all discussions as resolved. When passing a description or title, these values will take precedence over the default values.
+      gitlab_merge_request_to_resolve_discussions_of: 0  
+      # The ID of a discussion to resolve. This will fill in the issue with a default description and mark the discussion as resolved. Use in combination with merge_request_to_resolve_discussions_of.
+      gitlab_discussion_to_resolve: 0
+      # The weight of the issue in range 0 to 9
+      gitlab_weight: 3
 ```
 
 ### Works well with
@@ -45,6 +68,7 @@ collectors:
 ## Resources
 
 - https://developer.github.com/v3/issues/#create-an-issue
+- https://docs.gitlab.com/ee/api/issues.html#new-issue
 
 ## Support
 

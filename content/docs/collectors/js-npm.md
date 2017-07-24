@@ -1,5 +1,5 @@
 ---
-date: 2017-06-16T14:50:23.362599
+date: 2017-07-24T14:49:58.517120
 draft: false
 title: "Collector: js-npm"
 ---
@@ -26,7 +26,7 @@ it will simply install the new available versions in your range instead of
 reporting them back as newer versions than what you have installed currently
 (which could then be given to [actors](https://www.dependencies.io/docs/actors/)).
 
-### .dependencies.yml
+### dependencies.yml
 
 ```yaml
 collectors:
