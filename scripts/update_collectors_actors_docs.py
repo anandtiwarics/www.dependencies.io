@@ -1,6 +1,7 @@
 from os import path
 import datetime
 import requests
+import difflib
 
 
 repos = (
@@ -54,6 +55,18 @@ title: "{title}"
 
 {readme}
 """.format(date=date, title=title, readme=readme)
+
+    print 'Comparing old contents to new'
+    with open(file_path, 'r') as f:
+        old_contents = f.read()
+
+    differ = difflib.Differ()
+    diff_results = list(differ.compare(old_contents.splitlines(), file_contents.splitlines()))
+    lines_minus = [x for x in diff_results if x.startswith('-')]
+    if len(lines_minus) < 2:
+        print 'Skipping {}'.format(file_path)
+        # if only 1 line changed (date line) then don't write the results
+        continue
 
     print 'Writing {}'.format(file_path)
 
