@@ -4,8 +4,9 @@ draft: false
 title: Quickstart
 ---
 
-We really do mean quick. Just click the button below to go install the GitHub
-App on one of your repos. We'll then help you add a simple `dependencies.yml`
+We really do mean quick. Just sign in and either install our GitHub App or add a GitLab repo.
+
+We'll then help you add a simple `dependencies.yml`
 to the repo and run your first build!
 
-{{< btn btn-class="btn-primary" url="https://github.com/apps/dependencies" inner="Install GitHub App <span class='fa fa-chevron-right'></span>" >}}
+{{< btn btn-class="btn-primary" url="https://app.dependencies.io" inner="Sign in <span class='fa fa-chevron-right'></span>" >}}
