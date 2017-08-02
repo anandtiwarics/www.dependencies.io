@@ -25,6 +25,9 @@ used.
 - Secret (from above)
 - Location of your GitLab install ("https://gitlab.example.com")
 
+**PAUSE!** We'll have to add your settings before you can continue, so just wait
+for our response before you trying connecting your account or adding repos.
+
 ### Connect your GitLab account to dependencies.io
 
 Log in to https://app.dependencies.io with your existing dependencies.io account, then go to `https://manage.dependencies.io/accounts/gitlab_self_hosted/login/?host=https://gitlab.example.com&process=connect`,
