@@ -12,7 +12,7 @@ installation. Below are the steps to get it set up.
 We use this to authenticate your users and verify which projects they have
 access to.
 
-<div class="window-frame"><img src="{{< hash_img "docs/setup/gitlab-application.png" >}}" alt="GitLab OAuth Application" /></div>
+<div class="window-frame" style="margin-bottom: 20px;"><img src="{{< hash_img "docs/setup/gitlab-application.png" >}}" alt="GitLab OAuth Application" /></div>
 
 It should have the `api` and `read_user` scopes, and a redirect URI of `https://manage.dependencies.io/accounts/gitlab_self_hosted/login/callback/`.
 
