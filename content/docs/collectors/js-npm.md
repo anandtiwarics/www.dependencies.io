@@ -1,5 +1,5 @@
 ---
-date: 2017-07-24T14:49:58.517120
+date: 2017-08-08T13:39:43.618458
 draft: false
 title: "Collector: js-npm"
 ---
@@ -11,7 +11,7 @@ title: "Collector: js-npm"
 
 A [dependencies.io](https://www.dependencies.io)
 [collector](https://www.dependencies.io/docs/collectors/) for collecting npm
-dependencies using `npm install` or `yarn install`.
+dependencies using `npm` or `yarn`.
 
 ## Usage
 

@@ -1,5 +1,5 @@
 ---
-date: 2017-07-24T14:49:58.517120
+date: 2017-08-08T13:39:43.618458
 draft: false
 title: "Actor: php-composer"
 ---
@@ -26,11 +26,21 @@ collectors:
   - type: php-composer
     versions: "L.Y.Y"
     settings:  # all settings are optional
-      pr_labels:  # list of label names
+      # github options
+      github_labels:  # list of label names
       - bug
-      pr_assignees:  # list of usernames
+      github_assignees:  # list of usernames
       - davegaeddert
-      pr_milestone: 3  # milestone number
+      github_milestone: 3  # milestone number
+
+      # gitlab options
+      gitlab_assignee_id: 1  # assignee user ID
+      gitlab_labels:  # labels for MR as a list of strings
+      - dependencies
+      - update
+      gitlab_milestone_id: 1  # the ID of a milestone
+      gitlab_target_project_id: 1  # The target project (numeric id)
+      gitlab_remove_source_branch: true  # flag indicating if a merge request should remove the source branch when merging
 ```
 
 ### Works well with
