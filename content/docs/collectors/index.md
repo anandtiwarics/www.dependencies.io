@@ -15,6 +15,7 @@ the exact same tools that you would use when working with your dependencies.
 
 - [python-pip](python-pip)
 - [js-npm](js-npm)
+- [ruby-bundler](ruby-bundler)
 - [git-repo](git-repo)
 - [php-composer](php-composer)
 - [php-wordpress-core](php-wordpress-core)
