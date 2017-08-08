@@ -8,5 +8,7 @@ collectors:
     settings:
       paths:
       - netlify.toml
+      - repo_dependencies.yml
       patterns:
       - 'HUGO_VERSION = "{version_clean}"'
+      - 'installed: {version}'
