@@ -1,3 +1,6 @@
 [build]
     publish = "public"
-    command = "gulp build && DEPLOY_ENV=$CONTEXT hugo_0.19 && cp netlify_redirects public/_redirects"
+    command = "gulp build && DEPLOY_ENV=$CONTEXT hugo && cp netlify_redirects public/_redirects"
+
+[build.environment]
+    HUGO_VERSION = "0.25"
