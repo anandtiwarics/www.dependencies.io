@@ -9,4 +9,4 @@ collectors:
       paths:
       - netlify.toml
       patterns:
-      - '${version_clean}'
+      - 'HUGO_VERSION = "{version_clean}"'
