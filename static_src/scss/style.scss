@@ -111,3 +111,35 @@
     color: $gray-light;
     font-size: .8rem;
 }
+
+.dependency-type-choice {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    margin-bottom: 2rem;
+
+    &:hover {
+        border-color: $blue-dark;
+        color: $blue-dark;
+        text-decoration: none;
+    }
+
+    .img-container {
+        flex-grow: 1;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+
+        img {
+            margin: 0;
+            align-self: center;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 5px;
+        }
+    }
+}

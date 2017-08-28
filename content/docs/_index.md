@@ -19,8 +19,18 @@ If your new or just exploring, you might want to start with one of these:
 ## Does it support X?
 
 We support everything that we can through the use of _open-source Docker
-containers_. For more information about what is supported:
+containers_.
 
-- [View full collectors list]({{< relref "docs/collectors/index.md" >}})
-- [Explore available actors]({{< relref "docs/actors/index.md" >}})
-- Or look in the sidebar for certain types of dependencies
+<div class="row">
+    {{< dependency_type_choice "supporting/python.png" "Python" "docs/dependencies/python.md" >}}
+    {{< dependency_type_choice "supporting/ruby.svg" "Ruby" "docs/dependencies/ruby.md" >}}
+    {{< dependency_type_choice "supporting/docker.png" "Docker" "docs/collectors/dockerfile.md" >}}
+    {{< dependency_type_choice "supporting/php.svg" "PHP" "docs/dependencies/php.md" >}}
+
+    {{< dependency_type_choice "supporting/git.png" "Git" "docs/dependencies/git.md" >}}
+    {{< dependency_type_choice "supporting/github.png" "GitHub" "docs/dependencies/git.md" >}}
+    {{< dependency_type_choice "supporting/gitlab.svg" "GitLab" "docs/dependencies/git.md" >}}
+
+    {{< dependency_type_choice "supporting/javascript.png" "Javascript" "docs/dependencies/js.md" >}}
+    {{< dependency_type_choice "supporting/npm.svg" "NPM" "docs/dependencies/js.md" >}}
+</div>

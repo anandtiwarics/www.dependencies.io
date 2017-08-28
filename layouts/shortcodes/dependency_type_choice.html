@@ -1,0 +1,8 @@
+<div class="col-sm-3">
+    <a href="{{ relref .Page (.Get 2) }}" class="dependency-type-choice">
+        <div class="img-container">
+            <img src="/img/{{ index .Site.Data.img.hash (.Get 0) }}" alt="{{ .Get 1 }}">
+        </div>
+        <div>{{ .Get 1 }}</div>
+    </a>
+</div>
