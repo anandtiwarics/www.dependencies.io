@@ -13,6 +13,7 @@ repos = (
     ('collector', 'php-wordpress-core'),
     ('collector', 'php-wordpress-plugin'),
     ('collector', 'ruby-bundler'),
+    ('collector', 'js-lerna'),
     ('actor', 'python-pip'),
     ('actor', 'js-npm'),
     ('actor', 'repo-issue'),
@@ -22,6 +23,7 @@ repos = (
     ('actor', 'php-wordpress-core'),
     ('actor', 'php-wordpress-plugin'),
     ('actor', 'ruby-bundler'),
+    ('actor', 'js-lerna'),
 )
 
 

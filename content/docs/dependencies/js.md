@@ -7,9 +7,11 @@ title: Javascript
 ### Official collectors
 
 - [js-npm]({{< relref "docs/collectors/js-npm.md" >}})
+- [js-lerna]({{< relref "docs/collectors/js-lerna.md" >}})
 
 ### Official actors
 
 - [js-npm]({{< relref "docs/actors/js-npm.md" >}})
+- [js-lerna]({{< relref "docs/actors/js-lerna.md" >}})
 
 {{< generic_actors_list >}}
