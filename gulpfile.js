@@ -18,7 +18,7 @@ var style_scss = static_src_scss + "/style.scss"
 var bootstrap_custom_scss = static_src_scss + "/bootstrap_custom.scss"
 
 var dropseed_static_dir = "./themes/dropseed/static_src"
-var bootstrap_scss_dir = dropseed_static_dir + "/bootstrap-4.0.0-alpha.6/scss"
+var bootstrap_scss_dir = dropseed_static_dir + "/bootstrap-4.0.0-beta/scss"
 var bootstrap_scss = bootstrap_scss_dir + "/bootstrap.scss"
 var dropseed_style_scss = dropseed_static_dir + "/scss/style.scss"
 

@@ -11,7 +11,7 @@
 
             {{ block "header_container" . }}
             <div class="header-container">
-                <nav class="navbar navbar-toggleable-md {{ .Site.Params.navbar_classes | default "navbar-inverse bg-primary" }}">
+                <nav class="navbar navbar-expand-md {{ .Site.Params.navbar_classes | default "navbar-light bg-primary" }}">
                     <div class="container">
 
                         {{ partial "navbar_content.html" . }}
