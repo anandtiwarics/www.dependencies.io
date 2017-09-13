@@ -14,18 +14,25 @@ are found.
 ```yaml
 collectors:
 
-- type: python-pip  # name of an official collector
-  path: requirements.txt  # which file the collector should read
+  # name of an official collector
+- type: python-pip
+  # which file or directory the collector should read
+  path: requirements.txt
   actors:
-  - type: python-pip  # name of an official actor
-    dependencies: ".*"  # regular expression for filtering dependencies by name
-    versions: "L.Y.Y"  # versions that this actor should act on
-    settings:  # settings for this specific actor
-      pr_labels:
+    # name of an official actor
+  - type: python-pip
+    # regular expression for filtering dependencies by name
+    dependencies: ".*"
+    # versions that this actor should act on
+    versions: "L.Y.Y"
+    # settings for this specific actor
+    settings:
+      github_labels:
       - dependencies
 
 - type: js-npm
-  path: app  # the js-npm collector is given directories (which could have package.json, yarn.lock, etc.)
+  # the js-npm collector is given directories (which could have package.json, yarn.lock, etc.)
+  path: app
   actors:
   - type: js-npm
     dependencies: "react-.*"

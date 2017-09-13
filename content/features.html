@@ -1,0 +1,124 @@
+---
+date: 2017-08-07T16:58:01-05:00
+draft: false
+title: How it works
+type: page
+---
+
+<div class="page-header">
+    <h1>A Platform for Dependencies</h1>
+</div>
+
+<div class="container extra-spacing">
+
+    <div class="row extra-spacing">
+        <div class="col-sm-6">
+            <h3>Built on Containers</h3>
+            <p>
+                Dependencies.io is built around Docker containers, which allows
+                us to use the same <code>npm</code>, <code>pip</code>,
+                <code>bundle</code> and any other native tools for managing
+                dependencies.
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <img src="{{< hash_img "docs/docker.png" >}}" alt="Docker" style="max-width: 70%;">
+        </div>
+    </div>
+
+</div>
+
+<div class="gray-section">
+    <div class="container extra-spacing text-center">
+        <div class="row">
+            <div class="col-sm-6 mx-auto">
+                <h3>Open-sourced Components</h3>
+                <p>
+                    All of our <a href="{{< relref "docs/collectors/index.md" >}}">collectors</a> and <a href="{{< relref "docs/actors/index.md" >}}">actors</a>
+                    are open-sourced and readily available. Not only can you
+                    inspect exactly what will run on your code, but we're
+                    constantly evolving what they're capable of and are open to
+                    suggestions and improvements.
+                </p>
+                <h4 class="mt-4"><span class="fa fa-github"></span> <a href="https://github.com/dependencies-io">github.com<span class="font-weight-bold">/dependencies-io</span></a></h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row extra-spacing">
+        <div class="col-sm-5">
+            <h3>Version Content Discovery</h3>
+            <p>
+                Release notes and changelogs can be tricky to track down.
+                Our hand-tuned algorithm digs through everything that we can find
+                so that you don't have to. We do the best we can to make sure you
+                have all the information you need to merge a pull request.
+            </p>
+        </div>
+        <div class="col-sm-7">
+            <img src="{{< hash_img "version-content-discovery.png" >}}" alt="Version content discovery" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+<div class="blue-section pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <h3>Scheduled Builds</h3>
+                <p class="pt-2 pb-3">
+                    Your repo's dependencies are being updated all the time, whether
+                    or not you're working on the project. Our <strong><em>daily,
+                    weekly, and monthly scheduling options</em></strong> let you receive
+                    updates at a rate that works for you and your project.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+
+                <div class="card-deck">
+                    <div class="card bg-blue-dark">
+                        <div class="card-body">
+                            <h4 class="card-title">Daily</h4>
+                            <p class="card-text">
+                                For mission-critical projects that constantly need to be up-to-date
+                                with the latest bug fixes and security patches.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card bg-blue-dark">
+                        <div class="card-body">
+                            <h4 class="card-title">Weekly</h4>
+                            <p class="card-text">
+                                Ideal for teams that want to stay on top of their dependencies,
+                                but don't need every patch as soon as it comes out.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card bg-blue-dark">
+                        <div class="card-body">
+                            <h4 class="card-title">Monthly</h4>
+                            <p class="card-text">
+                                Perfect for low-touch projects that are on the back-burner.
+                                Don't let them fall too far behind.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section border border-top">
+    <div class="container text-center">
+        <h4>Your code is built on dependencies, take them seriously.</h4>
+        <a href="https://app.dependencies.io" class="mt-4 login-link btn btn-lg btn-primary">Try it now</a>
+    </div>
+</div>

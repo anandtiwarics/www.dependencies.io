@@ -1,0 +1,82 @@
+---
+date: 2017-08-07T16:58:01-05:00
+draft: false
+title: How it works
+type: page
+---
+
+<div class="page-header">
+    <h1>"Builds" in Dependencies.io</h1>
+</div>
+
+<div class="container mt-5 mb-5">
+
+    <div class="row">
+        <div class="col-sm-6 pt-4">
+            <h3>Automated Builds</h3>
+            <p>
+                Every day, week, or month dependencies.io will checkout
+                your repo and run a "build". Each build will run a series of
+                <a href="#collectors">collectors</a> and <a href="#actors">actors</a> to
+                read and update your dependencies.
+            </p>
+
+            <hr style="max-width: 100px;" class="mt-5 mb-5">
+
+            <h3 id="collectors"><span class="step">Step 1</span> Collectors</h3>
+            <p>
+                Collectors are the first step in each build. Their job is to
+                determine what you have installed, and which versions are
+                available. Each collector is a Docker container, and can have
+                any software installed that it needs.
+            </p>
+        </div>
+        <div class="col-sm-6 text-center">
+            <img src="{{< hash_img "build-screenshot.png" >}}" alt="Dependencies.io build screenshot" class="img-fluid" style="max-width: 90%">
+        </div>
+    </div>
+
+    <div class="row mt-5 mb-5">
+        <div class="col-sm-6">
+            <img src="{{< hash_img "version-content-discovery.png" >}}" alt="Version content discovery" class="img-fluid">
+        </div>
+        <div class="col-sm-6">
+            <h3><span class="step">Step 2</span> Version content discovery</h3>
+            <p>
+                Once we know what versions to <a href="#actors">act</a> on,
+                dependencies.io will use a custom algorithm to track down
+                the best release notes that we can find. That information is
+                then handed to the <a href="#actors">actors</a> so that we can
+                send you the most informative notifications possible.
+            </p>
+        </div>
+    </div>
+
+    <div class="row pt-3">
+        <div class="col-sm-8 mx-auto">
+            <h3 id="actors"><span class="step">Step 3</span> Actors</h3>
+            <p>
+                With release notes in-hand, actors can notify you however you like.
+                Pull requests can deliver the update straight to your repo, and
+                can even run custom commands that are specific to your workflow.
+                If you'd rather handle updates yourself then you can use
+                <a href="/docs/actors/repo-issue/">issues</a>, <a href="/docs/actors/slack/">Slack</a>,
+                or other types of notifications to kick-start the conversation
+                and let everyone know what's available.
+            </p>
+        </div>
+    </div>
+
+    <img src="{{< hash_img "actor-pr-diff.png" >}}" alt="Actor pull request diff" class="img-fluid mx-auto d-block" style="max-width: 80%;">
+
+</div>
+
+<div class="gray-section">
+    <div class="container extra-spacing text-center">
+        <h4>Need to run custom containers on our infrastructure?</h4>
+        <p>
+            Contact us to learn more about running custom collectors and actors on dependencies.io.
+        </p>
+        <a href="{{< relref "contact.html" >}}" class="btn btn-outline-primary">Contact Us</a>
+    </div>
+</div>

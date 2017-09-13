@@ -25,6 +25,38 @@
     }
 }
 
+.gray-section {
+    overflow: auto;
+    border-top: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+    background: #F9F9FB;
+}
+
+.blue-section {
+    overflow: auto;
+    background: theme-color("primary");
+    color: $gray-100;
+    p a {
+        color: white;
+        text-decoration: underline;
+    }
+}
+
+.step {
+    background-color: $blue-dark;
+    color: $white;
+    padding: .25rem .5rem;
+    line-height: 1.5;
+}
+
+.page-header {
+    background: linear-gradient($blue-dark, lighten($blue-dark, 5%));
+    color: $white;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
 .supporting-logos {
     border-top: 1px solid #d3d3d3;
     border-bottom: 1px solid #d3d3d3;
@@ -50,6 +82,29 @@
     margin-bottom: 7rem;
 }
 
+.example-title {
+    font-weight: $font-weight-bold;
+    img {
+        max-height: 40px;
+        margin-bottom: .5rem;
+    }
+}
+
+.example-config {
+    &::before {
+        content: "dependencies.yml";
+        background-color: $gray-300;
+        color: $gray-700;
+        font-size: .7rem;
+        font-family: $font-family-monospace;
+        display: block;
+        padding: .5rem .75rem;
+        border: 1px solid $gray-400;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+}
+
 .features {
     background-color: hsla(199, 77%, 99%, 1);
 
@@ -70,6 +125,20 @@
     }
     .col-sm-4 {
         padding-right: 3rem;
+    }
+}
+
+.pricing-container {
+    li {
+        margin-bottom: .3rem;
+    }
+}
+
+.faq {
+    margin-top: 2rem;
+    .faq-question {
+        color: $blue-dark;
+        font-weight: bold;
     }
 }
 
@@ -126,6 +195,9 @@
     flex-direction: column;
     height: 180px;
     margin-bottom: 2rem;
+    font-family: $font-family-monospace;
+    font-size: .9rem;
+    font-weight: $font-weight-bold;
 
     &:hover {
         border-color: $blue-dark;
@@ -144,7 +216,7 @@
             align-self: center;
             margin-left: auto;
             margin-right: auto;
-            padding-bottom: 5px;
+            width: 70%;
         }
     }
 }

@@ -1,19 +1,22 @@
 {{ define "content" }}
 
 <div class="section text-center coming-soon">
-    <h1>Now in Early Access</h1>
-    <a href="https://app.dependencies.io" class="login-early-access-link btn btn-lg btn-primary">Log in to Early Access</a>
-    <div class="container mt-4 mb-4" style="max-width: 700px;">
+    <div class="container" style="max-width: 600px;">
+        <h1 class="mb-4">Automated pull requests for all dependencies</h1>
+    </div>
+    <a href="https://app.dependencies.io" class="login-link btn btn-lg btn-primary">Free for Public Repos</a>
+    <div class="container mt-5 mb-5" style="max-width: 700px;">
         <script src="https://fast.wistia.com/embed/medias/3ppkms1fcw.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:62.5% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_3ppkms1fcw videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
     </div>
-    <h4 class="mt-4 mb-4">Manage all of your dependencies with a single service.</h4>
-    <a href="{{ relref . "docs/introduction.md" }}" class="btn btn-outline-primary">Learn more about how it works</a>
+    <h4 class="mt-5 mb-4">A single service for managing all of your dependencies.</h4>
+    <a href="{{ relref . "how-it-works.html" }}" class="btn btn-outline-primary">Learn more about how it works</a>
 </div>
 
 <div class="section supporting-logos">
     <div class="container text-center">
         <a href="/docs/"><img src="/img/{{ index .Site.Data.img.hash "supporting/python.png" }}" alt="python"></a>
         <a href="/docs/"><img src="/img/{{ index .Site.Data.img.hash "supporting/npm.svg" }}" alt="npm"></a>
+        <a href="/docs/"><img src="/img/{{ index .Site.Data.img.hash "supporting/yarn.png" }}" alt="yarn"></a>
         <a href="/docs/"><img src="/img/{{ index .Site.Data.img.hash "supporting/ruby.svg" }}" alt="ruby"></a>
         <a href="/docs/"><img src="/img/{{ index .Site.Data.img.hash "supporting/github.png" }}" alt="github"></a>
         <a href="/docs/"><img src="/img/{{ index .Site.Data.img.hash "supporting/golang.png" }}" alt="golang"></a>
@@ -29,7 +32,7 @@
     <div class="container">
         <div class="text-center mb-5">
             <h2>The dependencies platform</h2>
-            <h3 class="text-muted">Built for developers, by developers.</h3>
+            <h3 class="text-muted">A flexible system to fit any language or framework.</h3>
         </div>
 
         <div class="row pt-3">
@@ -78,8 +81,15 @@
         </div>
 
         <div class="text-center mb-5 mt-4">
-            <a href="https://app.dependencies.io" class="login-early-access-link btn btn-lg btn-primary">Log in to Early Access</a>
+            <a href="https://app.dependencies.io" class="login-link btn btn-lg btn-primary">Log in with GitHub or GitLab</a>
         </div>
+    </div>
+</div>
+
+<div class="section border border-top">
+    <div class="container text-center">
+        <h4>Dependencies are part of your code, treat them that way.</h4>
+        <a href="https://app.dependencies.io" class="mt-4 login-link btn btn-lg btn-primary">Sign up</a>
     </div>
 </div>
 

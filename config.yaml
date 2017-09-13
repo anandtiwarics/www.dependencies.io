@@ -3,10 +3,22 @@ title: "dependencies.io"
 baseURL: "https://www.dependencies.io/"
 theme: "dropseed"
 PygmentsCodeFences: true
-pygmentsstyle: friendly
+pygmentsstyle: native
 
 menu:
   navbar:
+    - Name: "Examples"
+      Identifier: "examples"
+      URL: "/examples/"
+      weight: -100
+    - Name: "Features"
+      Identifier: "features"
+      URL: "/features/"
+      weight: -95
+    - Name: "How It Works"
+      Identifier: "how-it-works"
+      URL: "/how-it-works/"
+      weight: -95
     - Name: "Pricing"
       Identifier: "pricing"
       URL: "/pricing/"

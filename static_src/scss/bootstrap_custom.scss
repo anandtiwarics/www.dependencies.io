@@ -13,6 +13,10 @@ $blue-light: #00ACF1;
 $blue-dark: #004168;
 $blue-darker: #06202C;
 
+.bg-blue-dark {
+    background-color: $blue-dark !important;
+}
+
 // required by dropseed theme
 $brand-primary-lighter: $blue-light;
 
@@ -25,7 +29,7 @@ $headings-font-family: $font-family-monospace;
 
 $enable-rounded: true;
 $enable-flex: true;
-$enable-gradients: true;
+$enable-gradients: false;
 $enable-shadows: true;
 $enable-transitions: true;
 

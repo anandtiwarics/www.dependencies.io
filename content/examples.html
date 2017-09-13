@@ -1,0 +1,217 @@
+---
+date: 2017-08-07T16:58:01-05:00
+draft: false
+title: Examples
+type: page
+---
+
+<div class="page-header">
+    <h1>Example Use Cases</h1>
+</div>
+
+<div class="container extra-spacing">
+    <div class="row">
+        <div class="col-sm-5">
+            <h2 class="example-title">Javascript <img src="{{< hash_img "supporting/javascript.png" >}}" alt="Dependencies.io javascript support" /></h2>
+            <div class="example-config">
+{{< highlight yaml >}}
+collectors:
+- type: js-npm
+  path: /
+  actors:
+  - type: js-npm
+    versions: "Y.Y.Y"
+{{< /highlight >}}
+            </div>
+
+            <ul>
+                <li>Full support for <code>npm</code> and <code>yarn</code></li>
+                <li>Multiple package.json files</li>
+                <li>Supports custom tools like <a href="{{< relref "docs/collectors/js-lerna.md" >}}">Lerna</a></li>
+            </ul>
+
+            <a href="{{< relref "docs/dependencies/js.md" >}}" class="btn btn-outline-primary">Read the docs</a>
+        </div>
+        <div class="col-sm-7 d-flex align-items-center">
+            <img src="{{< hash_img "actor-pr-diff.png" >}}" alt="Javascript pull request screenshot" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+<div class="gray-section">
+    <div class="container extra-spacing">
+        <div class="row">
+            <div class="col-sm-7 d-flex align-items-center">
+              <div class="window-frame">
+                    <img src="{{< hash_img "python-requests-pr-body.png" >}}" alt="Python pull request screenshot" class="img-fluid p-3 py-5">
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <h2 class="example-title">Python <img src="{{< hash_img "supporting/python.png" >}}" alt="Dependencies.io Python support" /></h2>
+                <div class="example-config">
+{{< highlight yaml >}}
+collectors:
+- type: python-pip
+  path: app/requirements.txt
+  actors:
+  - type: python-pip
+    versions: "L.Y.Y"
+  - type: repo-issue
+    versions: "Y.0.0"
+    dependencies: "django.*"
+    settings:
+      gitlab_labels:
+      - "django-dependencies"
+{{< /highlight >}}
+                </div>
+
+                <ul>
+                    <li>Built around <code>pip</code></li>
+                    <li>Works with <a href="https://www.kennethreitz.org/essays/a-better-pip-workflow"><code>requirements-to-freeze.txt</code> &rarr; <code>requirements.txt</code> workflow</a></li>
+                    <li>Support for <a href="https://github.com/jazzband/pip-tools">pip-tools</a> and <a href="https://github.com/kennethreitz/pipenv">pipenv</a> <span class="badge badge-secondary">coming soon</span></li>
+                </ul>
+
+                <a href="{{< relref "docs/dependencies/python.md" >}}" class="btn btn-outline-primary">Read the docs</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container extra-spacing">
+    <div class="row">
+        <div class="col-sm-5">
+            <h2 class="example-title">Ruby <img src="{{< hash_img "supporting/ruby.svg" >}}" alt="Dependencies.io Ruby support" /></h2>
+            <div class="example-config">
+{{< highlight yaml >}}
+collectors:
+- type: ruby-bundler
+  path: /
+  actors:
+  - type: ruby-bundler
+    versions: "L.L.Y"
+    dependencies_not_matching: "nokogiri"
+{{< /highlight >}}
+            </div>
+
+            <ul>
+                <li>Support for Ruby gems using <a href="http://bundler.io/">Bundler</a></li>
+                <li>Automated updates to <code>Gemfile</code> and <code>Gemfile.lock</code></li>
+            </ul>
+
+            <a href="{{< relref "docs/dependencies/ruby.md" >}}" class="btn btn-outline-primary">Read the docs</a>
+        </div>
+        <div class="col-sm-7 d-flex align-items-center">
+            <img src="{{< hash_img "ruby-pr-diff.png" >}}" alt="Ruby pull request screenshot" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+<div class="gray-section">
+    <div class="container extra-spacing">
+        <div class="row">
+            <div class="col-sm-7 d-flex align-items-center">
+                <div class="window-frame">
+                    <img src="{{< hash_img "php-pr-screenshot.png" >}}" alt="PHP pull request screenshot" class="img-fluid p-3">
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <h2 class="example-title"><img src="{{< hash_img "supporting/php.svg" >}}" alt="Dependencies.io PHP support" /></h2>
+                <div class="example-config">
+{{< highlight yaml >}}
+collectors:
+- type: php-composer
+  path: /
+  actors:
+  - type: php-composer
+    versions: "L.Y.Y"
+    settings:
+      github_labels:
+      - "dependencies"
+{{< /highlight >}}
+                </div>
+
+                <ul>
+                    <li>Uses <a href="https://getcomposer.org/">Composer</a> and Packagist</li>
+                    <li>Custom support for <a href="https://wordpress.org">WordPress</a> repos</li>
+                </ul>
+
+                <a href="{{< relref "docs/dependencies/php.md" >}}" class="btn btn-outline-primary">Read the docs</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container extra-spacing">
+    <div class="row">
+        <div class="col-sm-5">
+            <h2 class="example-title">Docker <img src="{{< hash_img "supporting/docker.png" >}}" alt="Dependencies.io Docker support" /></h2>
+            <div class="example-config">
+{{< highlight yaml >}}
+collectors:
+- type: dockerfile
+  path: Dockerfile
+  actors:
+  - type: find-replace
+    versions: "L.Y.Y"
+{{< /highlight >}}
+            </div>
+
+            <ul>
+                <li>Supports all public Dockerhub images</li>
+                <li>Automated pull requests for base image updates</li>
+            </ul>
+
+            <a href="{{< relref "docs/collectors/dockerfile.md" >}}" class="btn btn-outline-primary">Read the docs</a>
+        </div>
+        <div class="col-sm-7 d-flex align-items-center">
+            <div class="window-frame">
+                <img src="{{< hash_img "dockerfile-diff.png" >}}" alt="Docker pull request screenshot" class="img-fluid p-3">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="gray-section">
+    <div class="container extra-spacing">
+        <div class="row">
+            <div class="col-sm-7 d-flex align-items-center">
+                <div class="window-frame">
+                  <img src="{{< hash_img "git-minikube-diff.png" >}}" alt="Git pull request screenshot" class="img-fluid p-3">
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <h2 class="example-title"><img src="{{< hash_img "supporting/git.png" >}}" alt="Dependencies.io Git support" /></h2>
+                <div class="example-config">
+{{< highlight yaml >}}
+collectors:
+- type: git-repo
+  path: git_repo_dependencies.yml
+  actors:
+  - type: find-replace
+    versions: "L.Y.Y"
+    paths:
+    - cli/cli.py
+    - git_repo_dependencies.yml
+    patterns:
+    - "'minikube_version': '{version}'"
+    - 'installed: {version}'
+{{< /highlight >}}
+                </div>
+
+                <ul>
+                    <li>Perfect for tools not found in package managers</li>
+                    <li>Versions based on git tags</li>
+                </ul>
+
+                <a href="{{< relref "docs/dependencies/git.md" >}}" class="btn btn-outline-primary">Read the docs</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container extra-spacing text-center">
+    <h3>Don't see what you need?</h3>
+    <p>We've got Java, Go, Rust, .NET, iOS, and Android in our sights.</p>
+    <p>If you're interested in helping beta test<br>or even develop your own containers, let us know.</p>
+    <a href="{{< relref "contact.html" >}}" class="btn btn-outline-primary">Contact Us</a>
+</div>

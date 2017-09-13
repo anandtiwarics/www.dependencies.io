@@ -2,9 +2,9 @@
     <div class="col-sm-3">
         <p class="list-heading">About</p>
         <ul class="list-unstyled">
+            <li><a href="{{ relref . "features.html" }}">Features</a></li>
+            <li><a href="{{ relref . "how-it-works.html" }}">How It Works</a></li>
             <li><a href="{{ relref . "pricing.html" }}">Pricing</a></li>
-            <li><a href="{{ relref . "contact.html" }}">Contact</a></li>
-            <li><a href="/docs/">Docs</a></li>
         </ul>
     </div>
     <div class="col-sm-3">
@@ -26,7 +26,7 @@
         <p class="list-heading">Support</p>
         <ul class="list-unstyled">
             <li><a href="/docs/">Documentation</a></li>
-            <li><a href="https://github.com/dependencies-io/support">Support</a></li>
+            <li><a href="{{ relref . "contact.html" }}">Contact</a></li>
             <li><a href="http://status.dependencies.io">Status</a></li>
         </ul>
     </div>
