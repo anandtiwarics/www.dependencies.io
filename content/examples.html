@@ -6,34 +6,40 @@ type: page
 ---
 
 <div class="page-header">
-    <h1>Example Use Cases</h1>
+    <h1>Configuration Examples</h1>
 </div>
 
 <div class="container extra-spacing">
     <div class="row">
+        <div class="col-sm-7 d-flex align-items-center">
+            <img src="{{< hash_img "python-requests-pr-body.png" >}}" alt="Python pull request screenshot" class="img-fluid p-3 py-5">
+        </div>
         <div class="col-sm-5">
-            <h2 class="example-title">Javascript <img src="{{< hash_img "supporting/javascript.png" >}}" alt="Dependencies.io javascript support" /></h2>
+            <h2 class="example-title">Python <img src="{{< hash_img "supporting/python.png" >}}" alt="Dependencies.io Python support" /></h2>
             <div class="example-config">
 {{< highlight yaml >}}
 collectors:
-- type: js-npm
-  path: /
-  actors:
-  - type: js-npm
-    versions: "Y.Y.Y"
+- type: python-pip
+path: app/requirements.txt
+actors:
+- type: python-pip
+versions: "L.Y.Y"
+- type: repo-issue
+versions: "Y.0.0"
+dependencies: "django.*"
+settings:
+  gitlab_labels:
+  - "django-dependencies"
 {{< /highlight >}}
             </div>
 
             <ul>
-                <li>Full support for <code>npm</code> and <code>yarn</code></li>
-                <li>Multiple package.json files</li>
-                <li>Supports custom tools like <a href="{{< relref "docs/collectors/js-lerna.md" >}}">Lerna</a></li>
+                <li>Built around <code>pip</code></li>
+                <li>Works with <a href="https://www.kennethreitz.org/essays/a-better-pip-workflow"><code>requirements-to-freeze.txt</code> &rarr; <code>requirements.txt</code> workflow</a></li>
+                <li>Support for <a href="https://github.com/jazzband/pip-tools">pip-tools</a> and <a href="https://github.com/kennethreitz/pipenv">pipenv</a> <span class="badge badge-secondary">coming soon</span></li>
             </ul>
 
-            <a href="{{< relref "docs/dependencies/js.md" >}}" class="btn btn-outline-primary">Read the docs</a>
-        </div>
-        <div class="col-sm-7 d-flex align-items-center">
-            <img src="{{< hash_img "actor-pr-diff.png" >}}" alt="Javascript pull request screenshot" class="img-fluid">
+            <a href="{{< relref "docs/dependencies/python.md" >}}" class="btn btn-outline-primary">Read the docs</a>
         </div>
     </div>
 </div>
@@ -41,37 +47,31 @@ collectors:
 <div class="gray-section">
     <div class="container extra-spacing">
         <div class="row">
-            <div class="col-sm-7 d-flex align-items-center">
-              <div class="window-frame">
-                    <img src="{{< hash_img "python-requests-pr-body.png" >}}" alt="Python pull request screenshot" class="img-fluid p-3 py-5">
-                </div>
-            </div>
             <div class="col-sm-5">
-                <h2 class="example-title">Python <img src="{{< hash_img "supporting/python.png" >}}" alt="Dependencies.io Python support" /></h2>
+                <h2 class="example-title">Javascript <img src="{{< hash_img "supporting/javascript.png" >}}" alt="Dependencies.io javascript support" /></h2>
                 <div class="example-config">
-{{< highlight yaml >}}
-collectors:
-- type: python-pip
-  path: app/requirements.txt
-  actors:
-  - type: python-pip
-    versions: "L.Y.Y"
-  - type: repo-issue
-    versions: "Y.0.0"
-    dependencies: "django.*"
-    settings:
-      gitlab_labels:
-      - "django-dependencies"
-{{< /highlight >}}
+    {{< highlight yaml >}}
+    collectors:
+    - type: js-npm
+      path: /
+      actors:
+      - type: js-npm
+        versions: "Y.Y.Y"
+    {{< /highlight >}}
                 </div>
 
                 <ul>
-                    <li>Built around <code>pip</code></li>
-                    <li>Works with <a href="https://www.kennethreitz.org/essays/a-better-pip-workflow"><code>requirements-to-freeze.txt</code> &rarr; <code>requirements.txt</code> workflow</a></li>
-                    <li>Support for <a href="https://github.com/jazzband/pip-tools">pip-tools</a> and <a href="https://github.com/kennethreitz/pipenv">pipenv</a> <span class="badge badge-secondary">coming soon</span></li>
+                    <li>Full support for <code>npm</code> and <code>yarn</code></li>
+                    <li>Multiple package.json files</li>
+                    <li>Supports custom tools like <a href="{{< relref "docs/collectors/js-lerna.md" >}}">Lerna</a></li>
                 </ul>
 
-                <a href="{{< relref "docs/dependencies/python.md" >}}" class="btn btn-outline-primary">Read the docs</a>
+                <a href="{{< relref "docs/dependencies/js.md" >}}" class="btn btn-outline-primary">Read the docs</a>
+            </div>
+            <div class="col-sm-7 d-flex align-items-center">
+                <div class="window-frame">
+                    <img src="{{< hash_img "actor-pr-diff.png" >}}" alt="Javascript pull request screenshot" class="img-fluid p-3">
+                </div>
             </div>
         </div>
     </div>
