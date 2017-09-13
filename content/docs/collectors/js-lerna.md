@@ -1,5 +1,5 @@
 ---
-date: 2017-09-05T13:57:05.673737
+date: 2017-09-13T15:32:52.283920
 draft: false
 title: "Collector: js-lerna"
 ---
@@ -26,6 +26,12 @@ collectors:
   settings:
     # please use --concurrency=1 if you provide your own command
     bootstrap_command: lerna bootstrap --concurrency 1  # this is what is used by default
+
+    # false by default, enable if your lerna setup would benefit from
+    # also collecting/acting on the dependencies in your root package.json
+    # - this should probably be true if you use "hoist"
+    collect_root: true
+
   actors:
   - ...
 ```
