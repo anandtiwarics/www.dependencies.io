@@ -8,6 +8,22 @@ body {
 }
 .content-container { flex: 1; }
 
+.dropseed-header-container {
+    // $dropseed-color: #333;
+    $dropseed-color: #f2f2f2;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: .75rem;
+    text-align: right;
+    background-color: $dropseed-color;
+    // color: lighten($dropseed-color, 30%);
+    color: darken($dropseed-color, 30%);
+    a {
+        // color: lighten($dropseed-color, 55%);
+        color: darken($dropseed-color, 55%);
+    }
+}
+
 .navbar-brand img {
     max-height: 25px;
     margin-top: 1px;

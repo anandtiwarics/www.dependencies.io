@@ -9,6 +9,14 @@
 
         {{ block "body_content" . }}
 
+            {{ block "dropseed_header_container" . }}
+            <div class="dropseed-header-container">
+                <div class="container">
+                    <div>{{ .Site.Title }} is a product of <a href="https://www.dropseed.io">Dropseed</a></div>
+                </div>
+            </div>
+            {{ end }}
+
             {{ block "header_container" . }}
             <div class="header-container">
                 <nav class="navbar navbar-expand-md {{ .Site.Params.navbar_classes | default "navbar-light bg-primary" }}">
@@ -36,7 +44,7 @@
                     <div class="text-center">
                         <img src="/img/{{ index .Site.Data.img.hash .Site.Params.footer_logo }}" alt="{{ .Site.Title }} logo" class="logo">
                         <p class="copyright">
-                            <small>&copy; {{ now.Year }} Dropseed, LLC. All rights reserved.</small>
+                            <small><a href="https://www.dropseed.io">&copy; {{ now.Year }} Dropseed, LLC. All rights reserved.</a></small>
                             <br>
                             <small><small>Third party logos are property of their respective companies and organizations. Dropseed and {{ .Site.Title }} are not affiliated with these companies.</small></small>
                         </p>
