@@ -1,0 +1,3 @@
+[submodule "themes/dropseed-hugo-theme"]
+	path = themes/dropseed-hugo-theme
+	url = https://github.com/dropseedlabs/dropseed-hugo-theme
