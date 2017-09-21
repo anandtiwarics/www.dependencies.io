@@ -5,7 +5,7 @@ title: Version filtering
 ---
 
 With a [custom version-filtering
-syntax](http://github.com/dropseedlabs/version-filter), you can flexibly decide
+syntax](http://github.com/dropseed/version-filter), you can flexibly decide
 exactly which versions you want to be acted on.
 
 For SemVer compliant versioning, you can use our semver filtering, and for
