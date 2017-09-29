@@ -3,7 +3,7 @@ title: "dependencies.io"
 baseURL: "https://www.dependencies.io/"
 theme: "dropseed-hugo-theme"
 PygmentsCodeFences: true
-pygmentsstyle: native
+pygmentsstyle: monokai
 
 menu:
   navbar:

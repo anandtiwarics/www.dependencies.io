@@ -45,6 +45,9 @@ $font-weight-normal: 400;
 $font-weight-bold: 600;
 $headings-font-weight:   300;
 
+$code-bg: fade-out($blue-light, .9);
+$code-color: $blue-dark;
+
 // $navbar-inverse-color:                 $purple-lighter;
 // $navbar-inverse-hover-color:           white;
 // $navbar-inverse-active-color:          white;
