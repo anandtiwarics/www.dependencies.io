@@ -1,5 +1,5 @@
 ---
-date: 2017-09-13T15:32:52.283920
+date: 2017-10-12T23:33:41.450466
 draft: false
 title: "Collector: js-lerna"
 ---
@@ -24,6 +24,9 @@ collectors:
 - type: js-lerna
   path: /  # directory where lerna.json is located, root of your repo most likely
   settings:
+    # by default we autodetect npm/yarn and do basic install
+    root_install_command: npm run your-install-script
+
     # please use --concurrency=1 if you provide your own command
     bootstrap_command: lerna bootstrap --concurrency 1  # this is what is used by default
 
