@@ -1,5 +1,5 @@
 ---
-date: 2017-08-10T13:44:01.523136
+date: 2017-10-20T14:57:26.288375
 draft: false
 title: "Actor: php-composer"
 ---
@@ -26,6 +26,9 @@ collectors:
   - type: php-composer
     versions: "L.Y.Y"
     settings:  # all settings are optional
+      # an optional prefix to add to all commit messages, be sure to add a space at the end if you want one
+      commit_message_prefix: "chore: "
+
       # github options
       github_labels:  # list of label names
       - bug
