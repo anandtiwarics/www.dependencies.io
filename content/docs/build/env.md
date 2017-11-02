@@ -45,6 +45,24 @@ and also have a JSON library, so parsing these out shouldn't be too much work.
 - `GITLAB_REPO_FULL_NAME=dependencies-io/cli` - the slug path for your repo
 - `GITLAB_API_URL=https://gitlab.com/api/v4/projects/...` - full URL endpoint for your project in the GitLab API
 
+#### User settings as environment variables
+
+Users can add their own "settings" to `dependencies.yml` which automatically get passed through to your collector or actor.
+This makes it easy to give users additional options or control over how the container works or what it does.
+
+For example:
+```yml
+collectors:
+- type: python-pip
+  path: requirements.txt
+  settings:
+    custom_option: user-value
+```
+
+Would add a `SETTING_CUSTOM_OPTION=user-value` environment variable to your container. You can also use 
+arrays or dictionaries, which will get JSON-encoded. Notice that the name of the
+setting is `SETTING_` + the uppercased key -- please use underscores for separating words to ensure compatibility.
+
 ## Container limits
 
 In order to safely allow containers to run on our platform, there are limits on
