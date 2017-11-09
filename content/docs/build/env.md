@@ -23,15 +23,9 @@ environment variables. Strings are given as strings, and anything else is given
 as a JSON-encoded string. Most languages provide easy access to env variables
 and also have a JSON library, so parsing these out shouldn't be too much work.
 
-#### Collector environment variables
+Collectors and actors both have the following env variables:
 
 - `DEPENDENCIES_ENV=production` - in development this will be "test"
-- `COLLECTOR_ID=144.0` - the first number is the build number, the second is the index of the collector in the user's config
-
-#### Actor environment variables
-
-- `DEPENDENCIES_ENV=production` - in development this will be "test"
-- `ACTOR_ID=144.0.2` - the first number is the build number, the second is the index of the collector in the user's config, the third is the index of the actor in the collector that ran it
 - `BUILD_NUMBER=144` - *deprecated*, use `ACTOR_ID` instead
 - `GIT_SHA=125d650755f2dae16084732190f439e6b4d72c76` - sha for the git commit which the build is running on
 - `GIT_BRANCH=master` - git branch that the build is running on
@@ -44,6 +38,14 @@ and also have a JSON library, so parsing these out shouldn't be too much work.
 - `GITLAB_REPO_ID=539870` - the ID of your repo in GitLab
 - `GITLAB_REPO_FULL_NAME=dependencies-io/cli` - the slug path for your repo
 - `GITLAB_API_URL=https://gitlab.com/api/v4/projects/...` - full URL endpoint for your project in the GitLab API
+
+Additionally, collectors have:
+
+- `COLLECTOR_ID=144.0` - the first number is the build number, the second is the index of the collector in the user's config
+
+And actors have:
+
+- `ACTOR_ID=144.0.2` - the first number is the build number, the second is the index of the collector in the user's config, the third is the index of the actor in the collector that ran it
 
 #### User settings as environment variables
 
