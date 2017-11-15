@@ -1,5 +1,5 @@
 ---
-date: 2017-08-08T13:39:43.618458
+date: 2017-10-31T16:12:34.072875
 draft: false
 title: "Collector: js-npm"
 ---
@@ -31,9 +31,18 @@ reporting them back as newer versions than what you have installed currently
 ```yaml
 collectors:
 - type: js-npm
-  path: /  # directory where package.json / yarn.lock / package-lock.json are located
+  # directory where package.json / yarn.lock / package-lock.json are located
+  path: /
   settings:
-    node_env: production  # if you only care about production dependencies
+    # if you only care about production dependencies
+    node_env: production
+
+    # by default we'll collect the versions under the "latest" dist-tag (default npm behavior)
+    # if you want to follow a specific dist-tag (like "next" or "unstable"), then you
+    # can specify that here by the package name
+    dist_tags:
+      semantic-release: next
+
   actors:
   - ...
 ```

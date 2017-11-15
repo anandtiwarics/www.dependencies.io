@@ -1,5 +1,5 @@
 ---
-date: 2017-07-24T14:49:58.517120
+date: 2017-11-15T15:55:44.236223
 draft: false
 title: "Collector: php-composer"
 ---
@@ -17,12 +17,23 @@ that uses `composer install` to collect php dependencies.
 
 ## Usage
 
+> Note: if you are using the "dev-" version of a dependency, the only available
+updates that we report will be updates to that alias. For example, if you're using
+"dev-master" and are locked on commit 1234567, we will collect 1 available update
+to the latest commit for you but nothing else. If you need some other behavior,
+please open an issue on this repo.
+
 ### dependencies.yml
 
 ```yaml
 collectors:
 - type: php-composer
   path: /  # path with composer.json (and composer.lock)
+  settings:
+    # optionally also collect transitive dependencies, which
+    # will keep composer.lock up-to-date
+    # default: false
+    collect_transitive: true
   actors:
   - ...
 ```
